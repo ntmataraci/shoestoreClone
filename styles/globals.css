@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Righteous&display=swap');
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #F6D5D5;
+  overflow-x: hidden;
+}
+body {
+  scrollbar-width: 10px;
+  scrollbar-color:red;
+}
+
+
+body ::-webkit-scrollbar {
+  scrollbar-width: 10px;
+  scrollbar-color:red;
 }
 
 a {
@@ -13,4 +26,163 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1{
+  background-color: #ca498cc4;
+  color:white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+input[type="text"]{
+  height:2rem;
+}
+
+ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+.listItem::first-letter{
+text-transform: capitalize;
+}
+
+.listItem{
+  font-weight: bolder;
+
+}
+
+h2{
+  color:#ca498cc4
+}
+
+.sliderContainer{
+  height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .sliderContainer {
+    max-height: 350px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .videoContainer{
+    height: 350px;
+  }
+}
+
+
+.videoOpacity{
+  animation-name: videOpacity;
+  animation-duration: 4s;
+}
+
+.none{
+  font-size: 1rem;
+}
+
+@keyframes videOpacity{
+  0%{opacity:1}
+  100%{opacity: 0;}
+}
+
+
+.loadingAnim{
+  animation-name: loadingAnim;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+
+}
+
+@keyframes loadingAnim {
+  0%{transform:rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+
+.opacityAction{
+  animation-name:opacityAction;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes opacityAction{
+  0%{opacity:1}
+  100%{opacity: 0;display: none;}
+}
+
+
+/*hamburger */
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+
 }
